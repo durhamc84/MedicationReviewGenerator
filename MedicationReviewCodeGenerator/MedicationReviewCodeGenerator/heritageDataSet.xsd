@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="heritageDataSet" targetNamespace="http://tempuri.org/heritageDataSet.xsd" xmlns:mstns="http://tempuri.org/heritageDataSet.xsd" xmlns="http://tempuri.org/heritageDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="heritageConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="heritageConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MedicationReviewCodeGenerator.Properties.Settings.GlobalReference.Default.heritageConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="activworkTableAdapter" GeneratorDataComponentClassName="activworkTableAdapter" Name="activwork" UserDataComponentName="activworkTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="heritageConnectionString (Settings)" DbObjectName="heritage.ar.activwork" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT activitydate_d, program_c, clientcode_c FROM ar.activwork</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="activitydate_d" DataSetColumn="activitydate_d" />
+              <Mapping SourceColumn="program_c" DataSetColumn="program_c" />
+              <Mapping SourceColumn="clientcode_c" DataSetColumn="clientcode_c" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="heritageDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="heritageDataSet" msprop:Generator_UserDSName="heritageDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="activwork" msprop:Generator_TableClassName="activworkDataTable" msprop:Generator_TableVarName="tableactivwork" msprop:Generator_TablePropName="activwork" msprop:Generator_RowDeletingName="activworkRowDeleting" msprop:Generator_RowChangingName="activworkRowChanging" msprop:Generator_RowEvHandlerName="activworkRowChangeEventHandler" msprop:Generator_RowDeletedName="activworkRowDeleted" msprop:Generator_UserTableName="activwork" msprop:Generator_RowChangedName="activworkRowChanged" msprop:Generator_RowEvArgName="activworkRowChangeEvent" msprop:Generator_RowClassName="activworkRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="activitydate_d" msprop:Generator_ColumnVarNameInTable="columnactivitydate_d" msprop:Generator_ColumnPropNameInRow="activitydate_d" msprop:Generator_ColumnPropNameInTable="activitydate_dColumn" msprop:Generator_UserColumnName="activitydate_d" type="xs:dateTime" />
+              <xs:element name="program_c" msprop:Generator_ColumnVarNameInTable="columnprogram_c" msprop:Generator_ColumnPropNameInRow="program_c" msprop:Generator_ColumnPropNameInTable="program_cColumn" msprop:Generator_UserColumnName="program_c" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clientcode_c" msprop:Generator_ColumnVarNameInTable="columnclientcode_c" msprop:Generator_ColumnPropNameInRow="clientcode_c" msprop:Generator_ColumnPropNameInTable="clientcode_cColumn" msprop:Generator_UserColumnName="clientcode_c" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
